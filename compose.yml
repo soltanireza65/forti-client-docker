@@ -1,0 +1,13 @@
+services:
+  openfortivpn:
+    build: .
+    ports:
+      - "2222:2222"
+    privileged: true # Needed to create /dev/ppp device
+    cap_add:
+      - NET_ADMIN    # Allow network changes
+    devices:
+      - /dev/ppp:/dev/ppp
+    volumes:
+      - ./openfortivpn.conf:/etc/openfortivpn/config
+    restart: unless-stopped
