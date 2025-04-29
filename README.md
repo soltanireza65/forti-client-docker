@@ -1,17 +1,22 @@
+## create config file and fill credentials
+```bash
+cp openfortivpn.conf.example openfortivpn.conf
+```
+
 ## Run
 
 ```bash
-make up             # Start VPN and SSH server inside container
+make up
 ```
 
 ## proxy
 
 ```bash
-make ssh-proxy             # Start VPN and SSH server inside container
+make ssh-proxy             
 ```
 
 ## logs
 
 ```bash
-make logs             # Start VPN and SSH server inside container
+make logs             
 ```
